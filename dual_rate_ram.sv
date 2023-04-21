@@ -25,7 +25,7 @@ initial begin
     end
 
 end
-always_ff @( posedge clk_a ) begin : RAM_A
+    always_ff @( posedge clk_a ) begin : PORT_A
 
    if(~nrst_a)
    data_out_a <= {DATA_WIDTH{1'b0}};
@@ -40,7 +40,7 @@ end
 
 
 
-always_ff @( posedge clk_b ) begin : RAM_B
+    always_ff @( posedge clk_b ) begin : PORT_B
 
    if(~nrst_b)
    data_out_b <= {DATA_WIDTH{1'b0}};
